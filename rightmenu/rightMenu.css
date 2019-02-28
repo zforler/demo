@@ -1,0 +1,31 @@
+.menu-default{
+    position: fixed;
+    left:0;
+    top:0;
+    width:200px;
+    background-color: #f0f0f0;
+    border: #f0f0f0 thin solid;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: none;
+}
+.item-default{
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.item-default>*{
+    pointer-events: none;
+}
+.item-default:hover{
+    background-color: #333;
+    color:#f0f0f0;
+}
+.item-default:active{
+    background-color: #cccccc;
+}
+.item-unactive{
+    padding: 5px 10px;
+    background-color: #fff;
+    color:#ccc;
+}
