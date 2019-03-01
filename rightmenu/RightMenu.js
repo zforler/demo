@@ -60,11 +60,9 @@ class RightMenu{
   createMenu(){
       if(this.menu == null){
         this.menu = document.createElement('div')
-        this.menu.innerText = 'sss'
         this.menu.className = 'menu-default'
         document.body.appendChild(this.menu)
       }
-
 
       let mark = true
       if(this.event.createBefore instanceof Function){
@@ -115,7 +113,6 @@ class RightMenu{
   }
 
   setItems(items){
-    console.log(11)
     this.menuItems = items
     this.creatItem()
   }
