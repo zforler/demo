@@ -18,6 +18,28 @@
 <div id="menu">
 
 </div>
+<ul>
+    <li>
+        1.使用方式
+        js文件引入<script src="RightMenu.js"></script>
+        初始化：let rightMenu = new RightMenu({
+                                    targetId:'menu',//需要改变右键菜单的元素id
+                                    menuItems: items//菜单项数据，json数组
+                                })
+    </li>
+    <li>
+        2.menuItems参数
+        items1 = [
+            {
+                id: 'aa',//菜单id
+                text: 'ccc',//菜单文字，可以是html元素
+                show: true, //菜单是否显示
+                active: false,//菜单是否可用
+                style: 'item-unactive'
+            }
+        ]
+    </li>
+</ul>
 <body>
 
 <script src="RightMenu.js"></script>
