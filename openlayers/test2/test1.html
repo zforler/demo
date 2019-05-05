@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../ol.css" rel="stylesheet"/>
+    <script src="../ol.js"></script>
+</head>
+<body>
+    <div id="map"></div>
+</body>
+    <script>
+      let map = new ol.Map({
+        view: new ol.View({
+          center: [0, 0],
+          zoom: 1
+        }),
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        target: 'map',
+      });
+
+      // let view= new ol.View({
+      //   center: [0, 0],
+      //   zoom: 1
+      // });
+      // map.setView(view)
+        let clickEvent = map.on('click',(e)=>{
+          console.log(e)
+        })
+     map.on('singleclick',(e)=>{
+        console.log('s')
+      })
+        console.log(clickEvent)
+
+        // ol.Observable.unByKey(clickEvent)
+
+    </script>
+
+</html>

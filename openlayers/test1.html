@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="ol.css" rel="stylesheet"/>
+    <script src="ol.js"></script>
+    <script src="TestStyle.js"></script>
+    <!--<script src="polyfill.js"></script>-->
+</head>
+<body>
+<div id="map">
+
+</div>
+</body>
+<script>
+  let TestStyle = function (options) {
+    options = options || {};
+    var strokeWidth = 0;
+
+    if (options.stroke){
+      strokeWidth = options.stroke.getWidth();
+    }
+
+    ol.style.RegularShape.call(this,{
+      radius: options.radius,
+      fill:options.fill,
+      rotation:options.rotation,
+      rotateWithView: options.rotateWithView
+    });
+
+  }
+</script>
+<script>
+  // import Map from 'ol/Map';
+  // import View from 'ol/View';
+  // import TileLayer from 'ol/layer/Tile';
+  // import OSM from 'ol/source/OSM';
+  var map = new ol.Map({
+    view: new ol.View({
+      center: [0, 0],
+      zoom: 1
+    }),
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM()
+      })
+    ],
+    target: 'map'
+  });
+</script>
+
+</html>
